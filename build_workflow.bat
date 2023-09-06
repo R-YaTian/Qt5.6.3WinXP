@@ -2,7 +2,7 @@ REM this script assumes that the Microsoft.VisualStudio.Component.WinXP
 REM component is available in the local Visual Studio installation.
 
 powershell -Command^
-"Invoke-WebRequest https://github.com/R-YaTian/openssl102u-static-xp/raw/master/OpenSSL-1.0.2u-Static-XP.7z -O openssl.7z"
+ "Invoke-WebRequest https://github.com/R-YaTian/openssl102u-static-xp/raw/master/OpenSSL-1.0.2u-Static-XP.7z -O openssl.7z"
 7z x -oC:\ openssl.7z
 
 call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64_x86 -vcvars_ver=14.16
@@ -25,7 +25,7 @@ call configure.bat -prefix C:\Qt\5.6.3-Static-XP\ -opensource -confirm-license^
  -platform win32-msvc2017 -no-angle -no-opengl -openssl-linked
 
 powershell -Command^
-"Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
+ "Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
 7z x jom.zip
 
 mkdir C:\Qt
