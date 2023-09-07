@@ -18,7 +18,7 @@ REM harfbuzz is disabled because of QTBUG-38913
 call configure.bat -prefix D:\Qt\5.6.3XP\ -opensource -confirm-license^
  -release -nomake examples -nomake tests -target xp^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
- -platform win32-msvc2017 -no-angle -no-opengl -openssl-linked
+ -platform win32-msvc2017 -no-angle -opengl desktop -openssl-linked
 
 7z x jom.zip
 
