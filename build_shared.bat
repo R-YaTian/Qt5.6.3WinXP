@@ -32,6 +32,8 @@ mkdir C:\Qt
 jom /J 2
 nmake
 nmake install
+copy /Y C:\OpenSSL\bin\libeay32.dll C:\Qt\5.6.3XP\bin\libeay32.dll
+copy /Y C:\OpenSSL\bin\ssleay32.dll C:\Qt\5.6.3XP\bin\ssleay32.dll
 xcopy /Y /S /Q C:\OpenSSL\lib C:\Qt\5.6.3XP\lib
 
 cd /d C:\Qt
