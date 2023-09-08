@@ -1,0 +1,36 @@
+/******************************************************************************
+**
+** Copyright (C) 2015 The Qt Company Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the Qt Charts module.
+**
+** $QT_BEGIN_LICENSE:COMM$
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** $QT_END_LICENSE$
+**
+******************************************************************************/
+
+/*!
+     \example callout
+     \title Callout Example
+     \ingroup qtcharts_examples
+
+     \brief This example shows how to draw an additional element (a callout) on top of the chart.
+     \image examples_callout.png
+
+     QChart class provides two methods that map between the scene coordinates and the series domain
+    (defined by the axes ranges).
+
+     QPointF QChart::mapToPosition(const QPointF &value, QAbstractSeries *series)
+
+     QPointF QChart::mapToValue(const QPointF &position, QAbstractSeries *series)
+*/

@@ -1,0 +1,51 @@
+/******************************************************************************
+**
+** Copyright (C) 2015 The Qt Company Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the Qt Charts module.
+**
+** $QT_BEGIN_LICENSE:COMM$
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** $QT_END_LICENSE$
+**
+******************************************************************************/
+
+/*!
+    \example linechart
+    \title LineChart Example
+    \ingroup qtcharts_examples
+
+    \brief The example shows how to create a simple line chart.
+
+    \image examples_linechart.png
+
+    To create a line chart, a QLineSeries instance is needed. Let's create one.
+
+    \snippet linechart/main.cpp 1
+
+    Then we add data to the series. We can use the append() member function or use the stream operator.
+
+    \snippet linechart/main.cpp 2
+
+    To present the data on the chart we need a QChart instance. We add the series to it, create the default axes, and set the title of the chart.
+
+    \snippet linechart/main.cpp 3
+
+    Then we create a QChartView object with QChart as a parameter. This way we don't need to create a QGraphicsView scene ourselves. We also set the Antialiasing on to have the rendered lines look nicer.
+
+    \snippet linechart/main.cpp 4
+
+    The chart is ready to be shown.
+
+    \snippet linechart/main.cpp 5
+
+*/

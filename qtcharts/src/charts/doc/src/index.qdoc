@@ -1,0 +1,63 @@
+/******************************************************************************
+**
+** Copyright (C) 2015 The Qt Company Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the Qt Charts module.
+**
+** $QT_BEGIN_LICENSE:COMM$
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** $QT_END_LICENSE$
+**
+******************************************************************************/
+
+/*!
+    \title Qt Charts
+    \page index.html
+    \keyword About
+
+    Qt Charts module provides a set of easy to use chart components. It uses the Qt Graphics View
+    Framework, therefore charts can be easily integrated to modern user interfaces. Qt Charts can
+    be used as QWidgets, QGraphicsWidget, or QML types. Users can easily create impressive
+    graphs by selecting one of the charts themes.
+
+    \section1 Getting Started
+
+    To import Qt Charts QML types, add the following import statement to your \c .qml file:
+
+    \snippet doc_src_qmlcharts.cpp 0
+
+    If you intend to use Qt Charts C++ classes in your application, use the
+    following include and using directives:
+
+    \snippet doc_src_qtcharts.cpp 0
+
+    \note If you are only using a few classes from this module, we recommend including only those
+    specific classes instead of the whole module.
+
+    To link against the Qt Charts module, add this line to your \c qmake project file:
+
+    \snippet doc_src_qtcharts.pro 0
+
+    See the \l{Qt Charts Getting Started}{Getting started} page for further information on
+    how to use Qt Charts in your application.
+
+    \section1 References
+    \list
+        \li \l{Qt Charts C++ Classes}
+        \li \l{Qt Charts QML Types}
+    \endlist
+
+    Qt Charts comes with the following examples:
+
+    \annotatedlist qtcharts_examples
+
+*/

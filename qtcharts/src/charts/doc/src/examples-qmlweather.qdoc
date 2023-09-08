@@ -1,0 +1,55 @@
+/******************************************************************************
+**
+** Copyright (C) 2015 The Qt Company Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the Qt Charts module.
+**
+** $QT_BEGIN_LICENSE:COMM$
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** $QT_END_LICENSE$
+**
+******************************************************************************/
+
+/*!
+    \example qmlweather
+    \title Qml Weather
+    \ingroup qtcharts_examples
+
+    \image examples_qmlweather.png
+
+    \brief This is a basic demonstration showing how to use the different chart types by using qml.
+
+    By default the application uses static test data to mimic a weather forecast. You can also
+    obtain an application id from http://www.worldweatheronline.com/ to get access to weather API
+    provided by World Weather Online. You can then give your application id as a parameter to the
+    Qml Weather executable to make it use live data.
+
+    For example:
+    \code
+    bin\qmlweather.exe 1234567890abcdef123456
+    \endcode
+
+    The example application uses a ChartView and a some series to visualize weather data:
+    \snippet qmlweather/qml/qmlweather/main.qml 1
+    \snippet qmlweather/qml/qmlweather/main.qml 2
+
+    To get data with weather forecast data, we make an HTTP GET request to World Weather Online. We
+    request the response in JSON data format.
+    \snippet qmlweather/qml/qmlweather/main.qml 3
+
+    The JSON response contains an array of forecast data:
+    \snippet qmlweather/qml/qmlweather/main.qml 4
+
+    That is then used as input data for our series and a ListModel we use as a container for weather
+    icon URLs:
+    \snippet qmlweather/qml/qmlweather/main.qml 5
+*/

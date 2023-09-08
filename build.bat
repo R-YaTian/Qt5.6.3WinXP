@@ -23,7 +23,7 @@ call configure.bat -prefix D:\Qt\5.6.3XP\ -opensource -confirm-license^
 7z x jom.zip
 
 mkdir D:\Qt
-jom
+jom /J 4
 nmake
 nmake install
 xcopy /Y /S /Q D:\OpenSSL\lib D:\Qt\5.6.3XP\lib

@@ -22,14 +22,14 @@ REM harfbuzz is disabled because of QTBUG-38913
 call configure.bat -prefix C:\Qt\5.6.3XP\ -opensource -confirm-license^
  -release -nomake examples -nomake tests -target xp^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
- -platform win32-msvc2017 -no-angle -opengl es2 -openssl-linked
+ -platform win32-msvc2017 -no-angle -opengl desktop -openssl-linked
 
 powershell -Command^
  "Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
 7z x jom.zip
 
 mkdir C:\Qt
-jom
+jom /J 2
 nmake
 nmake install
 xcopy /Y /S /Q C:\OpenSSL\lib C:\Qt\5.6.3XP\lib

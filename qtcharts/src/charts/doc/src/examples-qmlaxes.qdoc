@@ -1,0 +1,44 @@
+/******************************************************************************
+**
+** Copyright (C) 2015 The Qt Company Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the Qt Charts module.
+**
+** $QT_BEGIN_LICENSE:COMM$
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** $QT_END_LICENSE$
+**
+******************************************************************************/
+
+/*!
+    \example qmlaxes
+    \title Qml Axes
+    \ingroup qtcharts_examples
+
+    \brief This is a demonstration of how to use axes in your QML application.
+
+    We begin with a chart that has a line series and a scatter series with random
+    data. Both series use the same axes.
+
+    \image examples_qmlaxes1.png
+    \snippet qmlaxes/qml/qmlaxes/View1.qml 1
+
+    The next example shows a chart with some accurate historical data that makes us to use a DateTimeAxis.
+
+    \image examples_qmlaxes2.png
+    \snippet qmlaxes/qml/qmlaxes/View2.qml 1
+
+    And the final example with a chart that uses a CategoryAxis to make the data easier to understand.
+
+    \image examples_qmlaxes3.png
+    \snippet qmlaxes/qml/qmlaxes/View3.qml 1
+*/
