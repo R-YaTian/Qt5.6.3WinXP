@@ -20,10 +20,10 @@ call configure.bat -prefix D:\Qt\5.6.3XP\ -opensource -confirm-license^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
  -platform win32-msvc2017 -no-angle -opengl desktop -openssl-linked
 
-REM 7z x jom.zip
+7z x jom.zip
 
 mkdir D:\Qt
-REM jom /J 4
+jom /J 4
 nmake
 nmake install
 copy /Y D:\OpenSSL\bin\libeay32.dll D:\Qt\5.6.3XP\bin\libeay32.dll
