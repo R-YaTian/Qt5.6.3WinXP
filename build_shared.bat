@@ -26,10 +26,10 @@ call configure.bat -prefix C:\Qt\5.6.3XP\ -opensource -confirm-license^
 
 powershell -Command^
  "Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
-7z x jom.zip
+REM 7z x jom.zip
 
 mkdir C:\Qt
-jom /J 2
+REM jom /J 2
 nmake
 nmake install
 copy /Y C:\OpenSSL\bin\libeay32.dll C:\Qt\5.6.3XP\bin\libeay32.dll
