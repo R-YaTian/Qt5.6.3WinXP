@@ -6,7 +6,7 @@ call "C:\Program Files (x86)\MicrosoftDirectXSDK\Utilities\bin\dx_setenv.cmd" x8
 
 REM https://devblogs.microsoft.com/cppblog/windows-xp-targeting-with-c-in-visual-studio-2012/
 set INCLUDE=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Include;C:\OpenSSL\include;%INCLUDE%
-set PATH=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Bin;.\gnuwin32\bin;.\Python27;%PATH%
+set PATH=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Bin;.\gnuwin32\bin;%PATH%
 set LIB=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Lib;C:\OpenSSL\lib;%LIB%
 
 REM the additional linker parameters are taken care of by qmake, since the
@@ -21,7 +21,6 @@ call configure.bat -prefix C:\Qt\5.6.3\ -opensource -confirm-license^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
  -platform win32-msvc2013 -opengl dynamic -openssl-linked
 
-7z x Python27.7z
 7z x gnuwin32.7z
 
 mkdir C:\Qt

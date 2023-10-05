@@ -1,0 +1,60 @@
+include($QT_INSTALL_DOCS/global/macros.qdocconf)
+include($QT_INSTALL_DOCS/global/qt-cpp-defines.qdocconf)
+include($QT_INSTALL_DOCS/global/compat.qdocconf)
+include($QT_INSTALL_DOCS/global/fileextensions.qdocconf)
+include($QT_INSTALL_DOCS/global/qt-html-templates-offline.qdocconf)
+
+project             = QtDataVisualization
+description         = Qt Data Visualization Reference Documentation
+version             = 1.2.2
+
+exampledirs += ../../../examples/datavisualization \
+               snippets
+
+headerdirs += ..
+imagedirs  += ../images \
+              images
+sourcedirs += ..
+
+examplesinstallpath = datavisualization
+
+indexes +=  $QT_INSTALL_DOCS/qtcore/qtcore.index \
+            $QT_INSTALL_DOCS/qtgui/qtgui.index \
+            $QT_INSTALL_DOCS/qtqml/qtqml.index \
+            $QT_INSTALL_DOCS/qtquick/qtquick.index \
+            $QT_INSTALL_DOCS/qtmultimedia/qtmultimedia.index
+
+qhp.projects                            = QtDataVisualization
+
+qhp.QtDataVisualization.file            = qtdatavisualization.qhp
+qhp.QtDataVisualization.namespace       = com.digia.qtdatavisualization.122
+qhp.QtDataVisualization.virtualFolder   = qtdatavisualization
+qhp.QtDataVisualization.indexTitle      = Qt Data Visualization
+qhp.QtDataVisualization.indexRoot       =
+
+qhp.QtDataVisualization.filterAttributes                        = qtdatavisualization 1.2.2 qtrefdoc
+qhp.QtDataVisualization.customFilters.Qt.name                   = QtDataVisualization 1.2.2
+qhp.QtDataVisualization.customFilters.Qt.filterAttributes       = qtdatavisualization 1.2.2
+qhp.QtDataVisualization.subprojects                             = gettingstarted examples classes types
+qhp.QtDataVisualization.subprojects.gettingstarted.title        = Getting Started
+qhp.QtDataVisualization.subprojects.gettingstarted.indexTitle   = Qt Data Visualization Getting Started
+qhp.QtDataVisualization.subprojects.gettingstarted.selectors    = fake:page
+qhp.QtDataVisualization.subprojects.gettingstarted.sortPages    = true
+qhp.QtDataVisualization.subprojects.examples.title              = Examples
+qhp.QtDataVisualization.subprojects.examples.indexTitle         = Qt Data Visualization Examples
+qhp.QtDataVisualization.subprojects.examples.selectors          = fake:example
+qhp.QtDataVisualization.subprojects.examples.sortPages          = true
+qhp.QtDataVisualization.subprojects.classes.title               = C++ Classes
+qhp.QtDataVisualization.subprojects.classes.indexTitle          = Qt Data Visualization C++ Classes
+qhp.QtDataVisualization.subprojects.classes.selectors           = class
+qhp.QtDataVisualization.subprojects.classes.sortPages           = true
+qhp.QtDataVisualization.subprojects.types.title                 = QML Types
+qhp.QtDataVisualization.subprojects.types.indexTitle            = Qt Data Visualization QML Types
+qhp.QtDataVisualization.subprojects.types.selectors             = qmlclass
+qhp.QtDataVisualization.subprojects.types.sortPages             = true
+
+navigation.landingpage = Qt Data Visualization
+navigation.cppclassespage = Qt Data Visualization C++ Classes
+navigation.qmltypespage = Qt Data Visualization QML Types
+
+buildversion = Qt Data Visualization $QT_VERSION Reference Documentation
