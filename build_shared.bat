@@ -11,7 +11,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliar
 
 REM https://devblogs.microsoft.com/cppblog/windows-xp-targeting-with-c-in-visual-studio-2012/
 set INCLUDE=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Include;C:\OpenSSL\include;C:\vcpkg\installed\x86-windows\include;%INCLUDE%
-set PATH=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Bin;%PATH%
+set PATH=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Bin;.\gnuwin32\bin;%PATH%
 set LIB=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Lib;C:\OpenSSL\lib;C:\vcpkg\installed\x86-windows\lib;%LIB%
 
 REM the additional linker parameters are taken care of by qmake, since the
@@ -29,6 +29,7 @@ call configure.bat -prefix C:\Qt\5.6.3XP\ -opensource -confirm-license^
 powershell -Command^
  "Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
 7z x jom.zip
+7z x gnuwin32.7z
 
 mkdir C:\Qt
 jom /J 2
