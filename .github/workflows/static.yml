@@ -1,0 +1,25 @@
+name: Build static
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@master
+      name: checkout
+
+    - run: ./build_static.bat
+      name: build
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: QtBuild
+        path: C:\Qt\Qt-5.6.3-XP-Static.7z
+      name: upload-qt-build

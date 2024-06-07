@@ -5,12 +5,14 @@ powershell -Command^
  "Invoke-WebRequest https://github.com/R-YaTian/openssl102u-xp/raw/master/OpenSSL-1.0.2u-XP.7z -O openssl.7z"
 7z x -oC:\ openssl.7z
 
+vcpkg install directxsdk:x86-windows
+
 call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64_x86 -vcvars_ver=14.16
 
 REM https://devblogs.microsoft.com/cppblog/windows-xp-targeting-with-c-in-visual-studio-2012/
-set INCLUDE=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Include;C:\OpenSSL\include;%INCLUDE%
+set INCLUDE=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Include;C:\OpenSSL\include;C:\vcpkg\installed\x86-windows\include;%INCLUDE%
 set PATH=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Bin;%PATH%
-set LIB=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Lib;C:\OpenSSL\lib;%LIB%
+set LIB=%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.1A\Lib;C:\OpenSSL\lib;C:\vcpkg\installed\x86-windows\lib;%LIB%
 
 REM the additional linker parameters are taken care of by qmake, since the
 REM -target xp switch causes the configure script to set the QMAKE_TARGET_OS
@@ -22,7 +24,7 @@ REM harfbuzz is disabled because of QTBUG-38913
 call configure.bat -prefix C:\Qt\5.6.3XP\ -opensource -confirm-license^
  -release -nomake examples -nomake tests -target xp -mp -no-pch^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
- -platform win32-msvc2017 -no-angle -opengl desktop -openssl-linked
+ -platform win32-msvc2017 -opengl dynamic -openssl-linked
 
 powershell -Command^
  "Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -O jom.zip"
