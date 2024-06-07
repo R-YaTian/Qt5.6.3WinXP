@@ -2,7 +2,7 @@ REM this script assumes that the Microsoft.VisualStudio.Component.WinXP
 REM component is available in the local Visual Studio installation.
 
 powershell -Command^
- "Invoke-WebRequest https://github.com/R-YaTian/openssl102u-static-xp/raw/master/OpenSSL-1.0.2u-Static-XP.7z -O openssl.7z"
+ "Invoke-WebRequest https://github.com/R-YaTian/openssl102u-xp/raw/master/OpenSSL-1.0.2u-Static-XP.7z -O openssl.7z"
 7z x -oC:\ openssl.7z
 
 vcpkg install directxsdk:x86-windows

@@ -36,4 +36,8 @@ wince* {
     }
 }
 
+!wince:!winrt {
+   win32:LIBS += -lgdi32 -luser32
+}
+
 load(qt_module)
