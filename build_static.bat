@@ -32,7 +32,7 @@ powershell -Command^
 7z x gnuwin32.7z
 
 mkdir C:\Qt
-jom /J 2
+jom /J 1
 nmake
 nmake install
 copy C:\OpenSSL\lib\* C:\Qt\5.6.3-Static\lib
