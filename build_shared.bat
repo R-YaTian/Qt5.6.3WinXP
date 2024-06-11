@@ -21,7 +21,7 @@ REM ",5.01", which is then passed as the extra suffix to the linker's subsystem
 REM parameter.
 
 REM harfbuzz is disabled because of QTBUG-38913
-call configure.bat -prefix C:\Qt\5.6.3XP\ -opensource -confirm-license^
+call configure.bat -prefix C:\Qt\5.6.3\ -opensource -confirm-license^
  -release -nomake examples -nomake tests -target xp -mp -no-pch^
  -no-harfbuzz -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-avx2^
  -platform win32-msvc2017 -opengl dynamic -openssl-linked
@@ -35,9 +35,9 @@ mkdir C:\Qt
 jom /J 2
 nmake
 nmake install
-copy /Y C:\OpenSSL\bin\libeay32.dll C:\Qt\5.6.3XP\bin\libeay32.dll
-copy /Y C:\OpenSSL\bin\ssleay32.dll C:\Qt\5.6.3XP\bin\ssleay32.dll
-xcopy /Y /S /Q C:\OpenSSL\lib C:\Qt\5.6.3XP\lib
+copy /Y C:\OpenSSL\bin\libeay32.dll C:\Qt\5.6.3\bin\libeay32.dll
+copy /Y C:\OpenSSL\bin\ssleay32.dll C:\Qt\5.6.3\bin\ssleay32.dll
+xcopy /Y /S /Q C:\OpenSSL\lib C:\Qt\5.6.3\lib
 
 cd /d C:\Qt
-7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -sse Qt-5.6.3-XP.7z 5.6.3XP
+7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -sse Qt-5.6.3-XP.7z 5.6.3
