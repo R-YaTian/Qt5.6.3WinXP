@@ -1,0 +1,25 @@
+name: Build shared debug
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@master
+      name: checkout
+
+    - run: ./build_shared_debug.bat
+      name: build
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: Qt Build
+        path: C:\Qt\Qt-5.6.3-XP-Debug.7z
+      name: upload-qt-build
